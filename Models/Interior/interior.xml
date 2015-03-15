@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>interior.ac</path>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>interieur</object-name>
+    <object-name>siege1</object-name>
+    <object-name>siege2</object-name>
+    <object-name>plateforme</object-name>
+    <object-name>grille</object-name>
+    <object-name>gardefou1</object-name>
+    <object-name>gardefou2</object-name>
+    <object-name>structure</object-name>
+    
+    <!-- Objets transparents -->
+  </animation>
+
+  <!-- Pilote -->
+  <model>
+    <path>Aircraft/Caproni-Ca3/Models/Pilot/pilot.xml</path>
+    <offsets>
+      <x-m> -3.95982 </x-m>
+      <y-m> -0.28849 </y-m>
+      <z-m> -0.18502 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Co pilote -->
+  <model>
+    <path>Aircraft/Caproni-Ca3/Models/Pilot/pilot.xml</path>
+    <offsets>
+      <x-m> -3.95982 </x-m>
+      <y-m>  0.28849 </y-m>
+      <z-m> -0.18502 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Tireur avant -->
+  <model>
+    <name>Gunner1</name>
+    <path>Aircraft/Caproni-Ca3/Models/Pilot/debout.xml</path>
+    <offsets>
+      <x-m> -5.01973 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m>  0.24781 </z-m>
+    </offsets>
+  </model>
+  
+  <animation>
+    <type>select</type>
+    <object-name>Gunner1</object-name>
+    <condition>
+      <property>/sim/model/show-gunner1</property>
+    </condition>
+  </animation>
+
+  <!-- Tireur arrière -->
+  <model>
+    <name>Gunner2</name>
+    <path>Aircraft/Caproni-Ca3/Models/Pilot/debout.xml</path>
+    <offsets>
+      <x-m> -0.26203 </x-m>
+      <y-m> -0.00000 </y-m>
+      <z-m>  1.37781 </z-m>
+      <heading-deg> 180 </heading-deg>
+    </offsets>
+  </model>
+
+  <animation>
+    <type>select</type>
+    <object-name>Gunner2</object-name>
+    <condition>
+      <property>/sim/model/show-gunner2</property>
+    </condition>
+  </animation>
+
+  <!-- Planche de bord -->
+  <model>
+    <path>Aircraft/Caproni-Ca3/Models/Interior/Panel/panel.xml</path>
+    <offsets>
+      <x-m> -4.21047 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m> -0.29975 </z-m>
+    </offsets>
+  </model>
+
+</PropertyList>
