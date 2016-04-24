@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList include="Systems/ca3-base.xml">
+
+  <sim>
+
+    <description>Caproni Ca 3 (YASim)</description>
+    <author>Emmanuel BARANGER (3D/FDM)</author>
+    <aircraft-version>0.2</aircraft-version>
+    <status>Alpha</status>
+    
+    <flight-model archive="y">yasim</flight-model>
+    <aero archive="y">Systems/ca3-yasim</aero>
+    
+    <rating>
+      <FDM type="int">     3 </FDM>
+      <systems type="int"> 1 </systems>
+      <cockpit type="int"> 1 </cockpit>
+      <model type="int">   4 </model>
+    </rating>
+
+  </sim>
+
+</PropertyList>
