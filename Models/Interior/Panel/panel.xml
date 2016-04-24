@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+  
+  <path>panel.ac</path>
+  
+  <animation>
+    <object-name>panel</object-name>
+    <object-name>paneltrous</object-name>
+    <object-name>manetteL</object-name>
+    <object-name>manetteC</object-name>
+    <object-name>manetteR</object-name>
+  </animation>
+
+  <!-- RPM -->
+  <model>
+    <path>Aircraft/Caproni-Ca3/Models/Interior/Panel/Instruments/rpm/rpm0.xml</path>
+    <offsets>
+      <x-m> -0.21749 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m>  0.69486 </z-m>
+      <pitch-deg> -15 </pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Caproni-Ca3/Models/Interior/Panel/Instruments/rpm/rpm1.xml</path>
+    <offsets>
+      <x-m> -0.20110 </x-m>
+      <y-m> -0.04000 </y-m>
+      <z-m>  0.63684 </z-m>
+      <pitch-deg> -15 </pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Caproni-Ca3/Models/Interior/Panel/Instruments/rpm/rpm2.xml</path>
+    <offsets>
+      <x-m> -0.20110 </x-m>
+      <y-m>  0.04000 </y-m>
+      <z-m>  0.63684 </z-m>
+      <pitch-deg> -15 </pitch-deg>
+    </offsets>
+  </model>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>manetteL</object-name>
+    <property>/controls/engines/engine[0]/throttle</property>
+    <factor> -40 </factor>
+    <center>
+      <x-m> -0.08 </x-m>
+      <y-m> -0.03 </y-m>
+      <z-m>  0.45 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>manetteC</object-name>
+    <property>/controls/engines/engine[1]/throttle</property>
+    <factor> -40 </factor>
+    <center>
+      <x-m> -0.08 </x-m>
+      <y-m> -0.03 </y-m>
+      <z-m>  0.45 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>manetteR</object-name>
+    <property>/controls/engines/engine[2]/throttle</property>
+    <factor> -40 </factor>
+    <center>
+      <x-m> -0.08 </x-m>
+      <y-m> -0.03 </y-m>
+      <z-m>  0.45 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+  
+</PropertyList>

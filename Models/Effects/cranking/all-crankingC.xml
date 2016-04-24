@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <model>
+    <path>Aircraft/Caproni-Ca3/Models/Effects/cranking/crankingL.xml</path>
+    <offsets>
+      <x-m> -1.01066 </x-m>
+      <y-m> -0.40953 </y-m>
+      <z-m>  0.59980 </z-m>
+      <heading-deg> -90 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Caproni-Ca3/Models/Effects/cranking/crankingL.xml</path>
+    <offsets>
+      <x-m> -0.85466 </x-m>
+      <y-m> -0.40953 </y-m>
+      <z-m>  0.59980 </z-m>
+      <heading-deg> -90 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Caproni-Ca3/Models/Effects/cranking/crankingL.xml</path>
+    <offsets>
+      <x-m> -0.67856 </x-m>
+      <y-m> -0.40953 </y-m>
+      <z-m>  0.59980 </z-m>
+      <heading-deg> -90 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Caproni-Ca3/Models/Effects/cranking/crankingL.xml</path>
+    <offsets>
+      <x-m> -0.52256 </x-m>
+      <y-m> -0.40953 </y-m>
+      <z-m>  0.59980 </z-m>
+      <heading-deg> -90 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Caproni-Ca3/Models/Effects/cranking/crankingL.xml</path>
+    <offsets>
+      <x-m> -0.34646 </x-m>
+      <y-m> -0.40953 </y-m>
+      <z-m>  0.59980 </z-m>
+      <heading-deg> -90 </heading-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/Caproni-Ca3/Models/Effects/cranking/crankingL.xml</path>
+    <offsets>
+      <x-m> -0.19046 </x-m>
+      <y-m> -0.40953 </y-m>
+      <z-m>  0.59980 </z-m>
+      <heading-deg> -90 </heading-deg>
+    </offsets>
+  </model>
+
+</PropertyList>
