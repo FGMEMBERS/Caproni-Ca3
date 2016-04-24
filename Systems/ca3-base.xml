@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <sim include="views.xml">
+
+    <fuel-fraction>0.75</fuel-fraction>
+
+    <startup>
+      <splash-texture>Aircraft/Caproni-Ca3/ca3-splash.png</splash-texture>
+    </startup>
+
+    <sound>
+      <path archive="y">Aircraft/Caproni-Ca3/Sounds/ca3-sound.xml</path>
+    </sound>
+
+    <model>
+      <path archive="y">Aircraft/Caproni-Ca3/Models/ca3.xml</path>
+      <show-gunner1 type="bool">0</show-gunner1>
+      <show-gunner2 type="bool">0</show-gunner2>
+      <livery>
+        <file type="string">default</file>
+      </livery>
+    </model>
+
+    <multiplay>
+      <chat_display>1</chat_display>
+      <generic> 
+        <int   n="0"  type="int">  0 </int>                                         <!--  0 immat -->
+        <int   n="1"  type="int">  0 </int>                                         <!--  1 immat -->
+        <int   n="2"  type="int">  0 </int>                                         <!--  2 immat -->
+        <int   n="3"  type="int">  0 </int>                                         <!--  3 immat -->
+        <int   n="4"  type="int">  0 </int>                                         <!--  4 immat -->
+        <int   n="5"  type="int">  0 </int>                                         <!--  5 immat -->
+        <int   n="6"  type="bool"> 1 </int>                                         <!--  6 -->
+        <int   n="7"  type="int">  0 </int>                                         <!--  7  -->
+        <int   n="8"  type="int" alias="/sim/model/show-gunner1"> 0 </int>          <!--  8 Noze gunner -->
+        <int   n="9"  type="int" alias="/sim/model/show-gunner2"> 0 </int>          <!--  9 Tail gunner -->
+        <int   n="10" type="int" alias="controls/armament/trigger">0</int>          <!-- 10 reserved for bombable mode -->
+        <float n="0"  alias="/sim/model/door-positions/crew/position-norm"/>
+        <float n="1"  alias="/sim/model/door-positions/passenger/position-norm"/>
+        <float n="2"  alias="/position/gear-agl-m"> 0 </float>                      <!-- altitude for MP shadow -->
+        <float n="3"  alias="/position/altitude-ft"> 0 </float>                     <!-- altitude for Smoke/Trail -->
+        <float n="4"  alias="/engines/engine[0]/rpm"/>
+        <float n="5"  alias="/engines/engine[0]/cranking"/>
+        <float n="6"  alias="/engines/engine[1]/rpm"/>
+        <float n="7"  alias="/engines/engine[1]/cranking"/>
+        <float n="8"  alias="/engines/engine[2]/rpm"/>
+        <float n="9"  alias="/engines/engine[2]/cranking"/>
+        <float n="10" alias="/gear/gear[0]/wow/"/>
+        <float n="11" alias="/gear/gear[1]/wow/"/>
+        <float n="12" alias="/gear/gear[2]/wow/"/>
+        <float n="13" alias="/gear/gear[3]/wow/"/>
+        <float n="14" alias="/gear/gear[4]/wow/"/>
+        <float n="15" alias="/gear/gear[5]/wow/"/>
+        <float n="16" alias="/gear/gear[6]/wow/"/>
+        <float n="17" alias="/gear/gear[1]/rollspeed-ms"/>
+        
+        <!-- For Bombable -->
+        <int type="int" n="10" alias="controls/armament/trigger">0</int>
+        <string n="9" type="string" />
+      </generic>
+    </multiplay>
+
+    <weight n="0">
+      <name>Pilot</name>
+      <weight-lb>175</weight-lb>
+      <max-lb>200</max-lb>
+    </weight>
+    
+    <help include="help.xml"/>
+
+    <menubar include="../Dialogs/ca3-menu.xml"/>
+
+  </sim>
+
+  <input include="ca3-keyboard.xml"/>
+
+  <nasal>
+    <doors>
+      <file>Aircraft/Caproni-Ca3/Nasal/doors.nas</file>
+    </doors>
+    <ca3>
+      <file>Aircraft/Caproni-Ca3/Nasal/liveries.nas</file>
+    </ca3>
+  </nasal>
+
+</PropertyList>

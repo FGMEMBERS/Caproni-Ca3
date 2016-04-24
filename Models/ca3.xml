@@ -1,0 +1,901 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<PropertyList>
+
+  <path>ca3.ac</path>
+
+  <!-- MP sound call -->
+  <sound>
+    <path>Aircraft/Caproni-Ca3/Sounds/mp-sound.xml</path>
+  </sound>
+  
+  <nasal>
+    <load>
+      var livery_update = aircraft.livery_update.new("Aircraft/Caproni-Ca3/Models/Liveries", 10);
+
+      var self = cmdarg();
+
+      var float_0 = self.getNode("sim/multiplay/generic/float[0]", 1);
+      var float_1 = self.getNode("sim/multiplay/generic/float[1]", 1);
+      
+      var crew_door = self.getNode("instrumentation/doors/crew/position-norm", 1);
+      var passenger_door = self.getNode("instrumentation/doors/passenger/position-norm", 1);
+    
+      crew_door.alias(float_0);
+      passenger_door.alias(float_1);
+    </load>
+
+    <unload>
+      livery_update.stop();
+      crew_door.unalias();
+      passenger_door.unalias();
+    </unload>
+  </nasal>
+
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>fuselage</object-name>
+    <object-name>rebord</object-name>
+    <object-name>ailesH</object-name>
+    <object-name>ailesB</object-name>
+    <object-name>ailes2</object-name>
+    <object-name>cableprofGH</object-name>
+    <object-name>cableprofGB</object-name>
+    <object-name>cableprofDH</object-name>
+    <object-name>cableprofDB</object-name>
+    <object-name>profondeur</object-name>
+    <object-name>cabledirG</object-name>
+    <object-name>directionG</object-name>
+    <object-name>directionC</object-name>
+    <object-name>cabledirD</object-name>
+    <object-name>directionD</object-name>
+    <object-name>cablesdirection</object-name>
+    <object-name>attaches</object-name>
+    <object-name>montants</object-name>
+    <object-name>supports</object-name>
+    <object-name>poulies</object-name>
+    <object-name>roueG</object-name>
+    <object-name>roueD</object-name>
+    <object-name>roueA</object-name>
+    <object-name>cableGH</object-name>
+    <object-name>cableGB</object-name>
+    <object-name>cablesG</object-name>
+    <object-name>aileronGH</object-name>
+    <object-name>aileronGB</object-name>
+    <object-name>cableDH</object-name>
+    <object-name>cableDB</object-name>
+    <object-name>cablesD</object-name>
+    <object-name>aileronDH</object-name>
+    <object-name>aileronDB</object-name>
+    <object-name>bolG</object-name>
+    <object-name>heliceG</object-name>
+    <object-name>bolC</object-name>
+    <object-name>heliceC</object-name>
+    <object-name>bolD</object-name>
+    <object-name>heliceD</object-name>
+    <object-name>cables</object-name>
+    <object-name>avant</object-name>
+    <object-name>trous</object-name>
+    <object-name>radiators</object-name>
+    <object-name>tuyeaux</object-name>
+    <object-name>reservoirs</object-name>
+    <object-name>attaches</object-name>
+    
+    <!-- Objets transparents -->
+    <object-name>propdiscG</object-name>
+    <object-name>propblurG</object-name>
+    <object-name>propdiscC</object-name>
+    <object-name>propblurC</object-name>
+    <object-name>propdiscD</object-name>
+    <object-name>propblurD</object-name>
+  </animation>
+
+  <animation>
+    <type>material</type>
+    <object-name>fuselage</object-name>
+    <object-name>rebord</object-name>
+    <object-name>ailesH</object-name>
+    <object-name>ailesB</object-name>
+    <object-name>ailes2</object-name>
+    <object-name>cableprofGH</object-name>
+    <object-name>cableprofGB</object-name>
+    <object-name>cableprofDH</object-name>
+    <object-name>cableprofDB</object-name>
+    <object-name>profondeur</object-name>
+    <object-name>cabledirG</object-name>
+    <object-name>directionG</object-name>
+    <object-name>directionC</object-name>
+    <object-name>cabledirD</object-name>
+    <object-name>directionD</object-name>
+    <object-name>cablesdirection</object-name>
+    <object-name>attaches</object-name>
+    <object-name>montants</object-name>
+    <object-name>supports</object-name>
+    <object-name>poulies</object-name>
+    <object-name>roueG</object-name>
+    <object-name>roueD</object-name>
+    <object-name>roueA</object-name>
+    <object-name>cableGH</object-name>
+    <object-name>cableGB</object-name>
+    <object-name>cablesG</object-name>
+    <object-name>aileronGH</object-name>
+    <object-name>aileronGB</object-name>
+    <object-name>cableDH</object-name>
+    <object-name>cableDB</object-name>
+    <object-name>cablesD</object-name>
+    <object-name>aileronDH</object-name>
+    <object-name>aileronDB</object-name>
+    <object-name>bolG</object-name>
+    <object-name>heliceG</object-name>
+    <object-name>bolC</object-name>
+    <object-name>heliceC</object-name>
+    <object-name>bolD</object-name>
+    <object-name>heliceD</object-name>
+    <object-name>cables</object-name>
+    <object-name>avant</object-name>
+    <object-name>trous</object-name>
+    <object-name>radiators</object-name>
+    <object-name>tuyeaux</object-name>
+    <object-name>reservoirs</object-name>
+    <object-name>attaches</object-name>
+    
+    <property-base>sim/model/livery</property-base>
+    <texture-prop>texture</texture-prop>
+    <texture>texture.png</texture>
+    <specular>
+      <red-prop>specular/red</red-prop>
+      <green-prop>specular/green</green-prop>
+      <blue-prop>specular/blue</blue-prop>
+    </specular>
+  </animation>
+
+  <effect>
+    <inherits-from>Effects/model-transparent</inherits-from>
+    <object-name>propdiscG</object-name>
+    <object-name>propblurG</object-name>
+    <object-name>propdiscC</object-name>
+    <object-name>propblurC</object-name>
+    <object-name>propdiscD</object-name>
+    <object-name>propblurD</object-name>
+  </effect>
+  
+  <!-- Une ombre pour OSG -->
+  <model>
+    <path>Aircraft/Caproni-Ca3/Models/shadow.xml</path>
+    <offsets>
+      <x-m>  0.00 </x-m>
+      <y-m>  0.00 </y-m>
+      <z-m> -1.66 </z-m>
+    </offsets>
+  </model>
+
+ <!-- Interieur -->
+  <model>
+    <path>Aircraft/Caproni-Ca3/Models/Interior/interior.xml</path>
+  </model>
+
+  <!-- Les moteurs -->
+  <!-- Gauche -->
+  <model>
+    <path>Aircraft/Caproni-Ca3/Models/Engine/engine1.xml</path>
+    <offsets>
+      <x-m> -2.31413 </x-m>
+      <y-m> -2.09045 </y-m>
+      <z-m>  0.07643 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Centre -->
+  <model>
+    <path>Aircraft/Caproni-Ca3/Models/Engine/engine2.xml</path>
+    <offsets>
+      <x-m> -0.79716 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m>  0.08568 </z-m>
+      <heading-deg> 180 </heading-deg>
+    </offsets>
+  </model>
+
+  <!-- Droite -->
+  <model>
+    <path>Aircraft/Caproni-Ca3/Models/Engine/engine1.xml</path>
+    <offsets>
+      <x-m> -2.31413 </x-m>
+      <y-m>  2.09045 </y-m>
+      <z-m>  0.07643 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Effets sur le sol -->
+  <!-- Roues avant -->
+  <model>
+    <path>Aircraft/Caproni-Ca3/Models/Effects/ground/ground0.xml</path>
+    <offsets>
+      <x-m> -4.96293 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m> -1.73879 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Roues Gauches -->
+  <model>
+    <path>Aircraft/Caproni-Ca3/Models/Effects/ground/ground1.xml</path>
+    <offsets>
+      <x-m> -2.28505 </x-m>
+      <y-m> -2.15420 </y-m>
+      <z-m> -1.85393 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Roues droites -->
+  <model>
+    <path>Aircraft/Caproni-Ca3/Models/Effects/ground/ground2.xml</path>
+    <offsets>
+      <x-m> -2.28505 </x-m>
+      <y-m>  2.15420 </y-m>
+      <z-m> -1.85393 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Patte gauche de queue -->
+  <model>
+    <path>Aircraft/Caproni-Ca3/Models/Effects/ground/ground3.xml</path>
+    <offsets>
+      <x-m>  4.35608 </x-m>
+      <y-m> -2.07421 </y-m>
+      <z-m> -0.67245 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Patte droite de queue -->
+  <model>
+    <path>Aircraft/Caproni-Ca3/Models/Effects/ground/ground4.xml</path>
+    <offsets>
+      <x-m>  4.35608 </x-m>
+      <y-m>  2.07421 </y-m>
+      <z-m> -0.67245 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Patte d'aile gauche -->
+  <model>
+    <path>Aircraft/Caproni-Ca3/Models/Effects/ground/ground5.xml</path>
+    <offsets>
+      <x-m>  -1.16479 </x-m>
+      <y-m> -10.51234 </y-m>
+      <z-m>  -1.12406 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Patte d'aile droite -->
+  <model>
+    <path>Aircraft/Caproni-Ca3/Models/Effects/ground/ground6.xml</path>
+    <offsets>
+      <x-m> -1.16479 </x-m>
+      <y-m> 10.51234 </y-m>
+      <z-m> -1.12406 </z-m>
+    </offsets>
+  </model>
+
+  <!-- Cranking effects -->
+  <!-- Left -->
+  <model>
+    <path>Aircraft/Caproni-Ca3/Models/Effects/cranking/all-crankingL.xml</path>
+  </model>
+
+  <!-- Right -->
+  <model>
+    <path>Aircraft/Caproni-Ca3/Models/Effects/cranking/all-crankingR.xml</path>
+  </model>
+
+  <!-- Center -->
+  <model>
+    <path>Aircraft/Caproni-Ca3/Models/Effects/cranking/all-crankingC.xml</path>
+  </model>
+
+  <!-- L'hélice --> 
+  <animation>
+    <name>HeliceG</name>
+    <object-name>propdiscG</object-name>
+    <object-name>propblurG</object-name>
+    <object-name>heliceG</object-name>
+    <object-name>bolG</object-name>
+  </animation>
+  
+  <!-- Séléction de l'objet visible en fonction des rpm -->
+  <animation>
+    <type>select</type>
+    <object-name>propdiscG</object-name>
+    <condition>
+      <greater-than>
+        <property>engines/engine[0]/rpm</property>
+        <value>1000</value>
+      </greater-than>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>propblurG</object-name>
+    <condition>
+    <and>
+      <greater-than>
+        <property>engines/engine[0]/rpm</property>
+        <value>400.000</value>
+      </greater-than>
+      <less-than>
+        <property>engines/engine[0]/rpm</property>
+        <value>1000.001</value>
+      </less-than>
+    </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>heliceG</object-name>
+    <condition>
+      <less-than>
+        <property>engines/engine[0]/rpm</property>
+        <value>1000</value>
+      </less-than>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>HeliceG</object-name>
+    <condition>
+      <greater-than>
+        <property>engines/engine[0]/rpm</property>
+        <value> 5 </value>
+      </greater-than>
+    </condition>
+    <property>engines/engine[0]/rpm</property>
+    <factor> 1 </factor>
+    <center>
+      <x-m> -3.25399 </x-m>
+      <y-m> -2.09044 </y-m>
+      <z-m> -0.00766 </z-m>
+    </center>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <!-- L'hélice --> 
+  <animation>
+    <name>HeliceD</name>
+    <object-name>propdiscD</object-name>
+    <object-name>propblurD</object-name>
+    <object-name>heliceD</object-name>
+    <object-name>bolD</object-name>
+  </animation>
+  
+  <!-- Séléction de l'objet visible en fonction des rpm -->
+  <animation>
+    <type>select</type>
+    <object-name>propdiscD</object-name>
+    <condition>
+      <greater-than>
+        <property>engines/engine[1]/rpm</property>
+        <value>1000</value>
+      </greater-than>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>propblurD</object-name>
+    <condition>
+    <and>
+      <greater-than>
+        <property>engines/engine[1]/rpm</property>
+        <value>400.000</value>
+      </greater-than>
+      <less-than>
+        <property>engines/engine[1]/rpm</property>
+        <value>1000.001</value>
+      </less-than>
+    </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>heliceD</object-name>
+    <condition>
+      <less-than>
+        <property>engines/engine[1]/rpm</property>
+        <value>1000</value>
+      </less-than>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>HeliceD</object-name>
+    <condition>
+      <greater-than>
+        <property>engines/engine[1]/rpm</property>
+        <value> 5 </value>
+      </greater-than>
+    </condition>
+    <property>engines/engine[1]/rpm</property>
+    <factor> 1 </factor>
+    <center>
+      <x-m> -3.25399 </x-m>
+      <y-m>  2.09044 </y-m>
+      <z-m> -0.00766 </z-m>
+    </center>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <!-- L'hélice --> 
+  <animation>
+    <name>HeliceC</name>
+    <object-name>propdiscC</object-name>
+    <object-name>propblurC</object-name>
+    <object-name>heliceC</object-name>
+    <object-name>bolC</object-name>
+  </animation>
+  
+  <!-- Séléction de l'objet visible en fonction des rpm -->
+  <animation>
+    <type>select</type>
+    <object-name>propdiscC</object-name>
+    <condition>
+      <greater-than>
+        <property>engines/engine[1]/rpm</property>
+        <value>1000</value>
+      </greater-than>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>propblurC</object-name>
+    <condition>
+    <and>
+      <greater-than>
+        <property>engines/engine[1]/rpm</property>
+        <value>400.000</value>
+      </greater-than>
+      <less-than>
+        <property>engines/engine[1]/rpm</property>
+        <value>1000.001</value>
+      </less-than>
+    </and>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>select</type>
+    <object-name>heliceC</object-name>
+    <condition>
+      <less-than>
+        <property>engines/engine[1]/rpm</property>
+        <value>1000</value>
+      </less-than>
+    </condition>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>HeliceC</object-name>
+    <condition>
+      <greater-than>
+        <property>engines/engine[1]/rpm</property>
+        <value> 5 </value>
+      </greater-than>
+    </condition>
+    <property>engines/engine[1]/rpm</property>
+    <factor> 1 </factor>
+    <center>
+      <x-m> -0.07633 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m>  0.00000 </z-m>
+    </center>
+    <axis>
+      <x> -1 </x>
+      <y>  0 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <!-- Animations des ailerons -->
+  <animation>
+    <type>rotate</type>
+    <object-name>aileronGH</object-name>
+    <object-name>cableGH</object-name>
+    <object-name>cablesG</object-name>
+    <property>surface-positions/left-aileron-pos-norm</property>
+    <factor> 15 </factor>
+    <axis>
+      <x1-m>  -1.39739 </x1-m>
+      <y1-m> -10.93685 </y1-m>
+      <z1-m>   1.51666 </z1-m>
+      <x2-m>  -1.39942 </x2-m>
+      <y2-m>  -7.64087 </y2-m>
+      <z2-m>   1.49344 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>cableGH</object-name>
+    <property>surface-positions/left-aileron-pos-norm</property>
+    <interpolation>
+      <entry><ind> -1 </ind><dep>  16 </dep></entry>
+      <entry><ind>  0 </ind><dep>   0 </dep></entry>
+      <entry><ind>  1 </ind><dep> -15 </dep></entry>
+    </interpolation>
+    <axis>
+      <x1-m>  -1.47311 </x1-m>
+      <y1-m> -10.23731 </y1-m>
+      <z1-m>   1.83483 </z1-m>
+      <x2-m>  -1.47561 </x2-m>
+      <y2-m>  -8.73731 </y2-m>
+      <z2-m>   1.83483 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>cablesG</object-name>
+    <property>surface-positions/left-aileron-pos-norm</property>
+    <factor> -15 </factor>
+    <axis>
+      <x1-m>  -0.71414 </x1-m>
+      <y1-m> -10.61978 </y1-m>
+      <z1-m>   1.39770 </z1-m>
+      <x2-m>  -0.79790 </x2-m>
+      <y2-m>  -8.35484 </y2-m>
+      <z2-m>   1.39770 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>aileronDH</object-name>
+    <object-name>cableDH</object-name>
+    <object-name>cablesD</object-name>
+    <property>surface-positions/right-aileron-pos-norm</property>
+    <factor> 15 </factor>
+    <axis>
+      <x1-m> -1.39942 </x1-m>
+      <y1-m>  7.64087 </y1-m>
+      <z1-m>  1.49344 </z1-m>
+      <x2-m> -1.39739 </x2-m>
+      <y2-m> 10.93685 </y2-m>
+      <z2-m>  1.51666 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>cableDH</object-name>
+    <property>surface-positions/right-aileron-pos-norm</property>
+    <interpolation>
+      <entry><ind> -1 </ind><dep>  16 </dep></entry>
+      <entry><ind>  0 </ind><dep>   0 </dep></entry>
+      <entry><ind>  1 </ind><dep> -15 </dep></entry>
+    </interpolation>
+    <axis>
+      <x1-m> -1.47561 </x1-m>
+      <y1-m>  8.73731 </y1-m>
+      <z1-m>  1.83483 </z1-m>
+      <x2-m> -1.47311 </x2-m>
+      <y2-m> 10.23731 </y2-m>
+      <z2-m>  1.83483 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>cablesD</object-name>
+    <property>surface-positions/right-aileron-pos-norm</property>
+    <factor> -15 </factor>
+    <axis>
+      <x1-m> -0.79790 </x1-m>
+      <y1-m>  8.35484 </y1-m>
+      <z1-m>  1.39770 </z1-m>
+      <x2-m> -0.71414 </x2-m>
+      <y2-m> 10.61978 </y2-m>
+      <z2-m>  1.39770 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>aileronGB</object-name>
+    <object-name>cableGB</object-name>
+    <property>surface-positions/left-aileron-pos-norm</property>
+    <factor> 15 </factor>
+    <axis>
+      <x1-m>  -1.39739 </x1-m>
+      <y1-m> -10.93685 </y1-m>
+      <z1-m>  -0.57840 </z1-m>
+      <x2-m>  -1.39942 </x2-m>
+      <y2-m>  -7.64087 </y2-m>
+      <z2-m>  -0.60161 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>cableGB</object-name>
+    <property>surface-positions/left-aileron-pos-norm</property>
+    <interpolation>
+      <entry><ind> -1 </ind><dep>  16 </dep></entry>
+      <entry><ind>  0 </ind><dep>   0 </dep></entry>
+      <entry><ind>  1 </ind><dep> -15 </dep></entry>
+    </interpolation>
+    <axis>
+      <x1-m>  -1.55719 </x1-m>
+      <y1-m> -10.23730 </y1-m>
+      <z1-m>  -0.91816 </z1-m>
+      <x2-m>  -1.55966 </x2-m>
+      <y2-m>  -8.73730 </y2-m>
+      <z2-m>  -0.91778 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>aileronDB</object-name>
+    <object-name>cableDB</object-name>
+    <property>surface-positions/right-aileron-pos-norm</property>
+    <factor> 15 </factor>
+    <axis>
+      <x1-m> -1.39942 </x1-m>
+      <y1-m>  7.64087 </y1-m>
+      <z1-m> -0.60161 </z1-m>
+      <x2-m> -1.39739 </x2-m>
+      <y2-m> 10.93685 </y2-m>
+      <z2-m> -0.57840 </z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>cableDB</object-name>
+    <property>surface-positions/right-aileron-pos-norm</property>
+    <interpolation>
+      <entry><ind> -1 </ind><dep>  16 </dep></entry>
+      <entry><ind>  0 </ind><dep>   0 </dep></entry>
+      <entry><ind>  1 </ind><dep> -15 </dep></entry>
+    </interpolation>
+    <axis>
+      <x1-m> -1.55966 </x1-m>
+      <y1-m>  8.73730 </y1-m>
+      <z1-m> -0.91778 </z1-m>
+      <x2-m> -1.55719 </x2-m>
+      <y2-m> 10.23730 </y2-m>
+      <z2-m> -0.91816 </z2-m>
+    </axis>
+  </animation>
+
+  <!-- Gouverne de profondeur -->
+  <animation>
+    <type>rotate</type>
+    <object-name>cableprofGH</object-name>
+    <object-name>cableprofGB</object-name>
+    <object-name>cableprofDH</object-name>
+    <object-name>cableprofDB</object-name>
+    <object-name>profondeur</object-name>
+    <property>surface-positions/elevator-pos-norm</property>
+    <factor> 15 </factor>
+    <center>
+      <x-m> 4.22589 </x-m>
+      <y-m> 0.00000 </y-m>
+      <z-m> 0.19393 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>cableprofGH</object-name>
+    <object-name>cableprofDH</object-name>
+    <property>surface-positions/elevator-pos-norm</property>
+    <factor> -15 </factor>
+    <center>
+      <x-m> 4.19446 </x-m>
+      <y-m> 0.00000 </y-m>
+      <z-m> 0.36785 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>cableprofGB</object-name>
+    <object-name>cableprofDB</object-name>
+    <property>surface-positions/elevator-pos-norm</property>
+    <factor> -15 </factor>
+    <center>
+      <x-m> 4.19446 </x-m>
+      <y-m> 0.00000 </y-m>
+      <z-m> 0.02002 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 1 </y>
+      <z> 0 </z>
+    </axis>
+  </animation>
+
+  <!-- Gouverne de direction -->
+  <animation>
+    <type>rotate</type>
+    <object-name>directionG</object-name>
+    <object-name>cabledirG</object-name>
+    <property>surface-positions/rudder-pos-norm</property>
+    <factor> -15 </factor>
+    <center>
+      <x-m>  3.89169 </x-m>
+      <y-m> -2.16000 </y-m>
+      <z-m>  0.24361 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>cabledirG</object-name>
+    <property>surface-positions/rudder-pos-norm</property>
+    <factor> 15 </factor>
+    <center>
+      <x-m>  3.88215 </x-m>
+      <y-m> -2.52281 </y-m>
+      <z-m>  0.34383 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>directionC</object-name>
+    <object-name>cablesdirection</object-name>
+    <property>surface-positions/rudder-pos-norm</property>
+    <factor> -15 </factor>
+    <center>
+      <x-m> 3.89169 </x-m>
+      <y-m> 0.00000 </y-m>
+      <z-m> 0.24361 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>cablesdirection</object-name>
+    <property>surface-positions/rudder-pos-norm</property>
+    <factor> 15 </factor>
+    <center>
+      <x-m> 5.40990 </x-m>
+      <y-m> 0.00000 </y-m>
+      <z-m> 1.44740 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>rotate</type>
+    <object-name>directionD</object-name>
+    <object-name>cabledirD</object-name>
+    <property>surface-positions/rudder-pos-norm</property>
+    <factor> -15 </factor>
+    <center>
+      <x-m> 3.89169 </x-m>
+      <y-m> 2.16000 </y-m>
+      <z-m> 0.24361 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>cabledirD</object-name>
+    <property>surface-positions/rudder-pos-norm</property>
+    <factor> 15 </factor>
+    <center>
+      <x-m> 3.88215 </x-m>
+      <y-m> 2.52281 </y-m>
+      <z-m> 0.34383 </z-m>
+    </center>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+
+  <!-- Rotation des roues lors du roulage -->
+  <animation>
+    <type>spin</type>
+    <object-name>rouesA</object-name>
+    <property>gear/gear[0]/rollspeed-ms</property>
+    <factor> 30 </factor>
+    <center>
+      <x-m> -4.96293 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m> -1.37199 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+  
+  <animation>
+    <type>spin</type>
+    <object-name>rouesG</object-name>
+    <property>gear/gear[0]/rollspeed-ms</property>
+    <factor> 30 </factor>
+    <center>
+      <x-m> -2.28505 </x-m>
+      <y-m> -2.15420 </y-m>
+      <z-m> -1.48008 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>spin</type>
+    <object-name>rouesD</object-name>
+    <property>gear/gear[1]/rollspeed-ms</property>
+    <factor> 30 </factor>
+    <center>
+      <x-m> -2.28505 </x-m>
+      <y-m>  2.15420 </y-m>
+      <z-m> -1.48008 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y> -1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+</PropertyList>
