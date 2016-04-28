@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
+<<<<<<< HEAD
 
   <path>shadow.ac</path>
 
@@ -11,22 +12,46 @@
     <object-name>shadow</object-name>
   </animation>
 
+=======
+  
+  <path>shadow.ac</path>
+  
+  <animation>
+    <!-- Objets opaques -->
+    
+    <!-- Objets transparents -->
+    <object-name>shadow</object-name>
+  </animation>
+  
+>>>>>>> svn/master
   <animation>
     <type>noshadow</type>
     <object-name>shadow</object-name>
   </animation>
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> svn/master
   <animation>
     <type>select</type>
     <object-name>shadow</object-name>
     <condition>
       <and>
         <not><property>sim/freeze/replay-state</property></not>
+<<<<<<< HEAD
         <not><property>sim/rendering/shadows/enabled</property></not>
       </and>
     </condition>
   </animation>
 
+=======
+        <not><property>sim/rendering/rembrandt/enabled</property></not>
+      </and>
+    </condition>
+  </animation>
+  
+>>>>>>> svn/master
   <!-- Une ombre pour OSG en attendant mieux ;) basé sur l'ombre du DC 3-->
   <!-- pitch -->
   <animation>
@@ -40,7 +65,11 @@
       <z> 0 </z>
     </axis>
   </animation>
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> svn/master
   <!-- roll -->
   <animation>
     <type>rotate</type>
@@ -53,6 +82,7 @@
       <z> 0 </z>
     </axis>
   </animation>
+<<<<<<< HEAD
 
   <!-- Translate to ground level -->
   <animation>
@@ -69,3 +99,21 @@
 
 </PropertyList>
 
+=======
+  
+  <!-- Translate to ground level -->
+  <animation>
+    <type>translate</type>
+    <object-name>shadow</object-name>
+    <!-- /position/gear-agl-m -->
+    <property>sim/multiplay/generic/float[2]</property>
+    <factor> -1 </factor>
+    <axis>
+      <x> 0 </x>
+      <y> 0 </y>
+      <z> 1 </z>
+    </axis>
+  </animation>
+  
+</PropertyList>
+>>>>>>> svn/master

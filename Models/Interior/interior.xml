@@ -7,8 +7,11 @@
   <animation>
     <!-- Objets opaques -->
     <object-name>interieur</object-name>
+<<<<<<< HEAD
     <object-name>siege1</object-name>
     <object-name>siege2</object-name>
+=======
+>>>>>>> svn/master
     <object-name>plateforme</object-name>
     <object-name>grille</object-name>
     <object-name>gardefou1</object-name>
@@ -18,7 +21,26 @@
     <!-- Objets transparents -->
   </animation>
 
+<<<<<<< HEAD
   <!-- Pilote -->
+=======
+  <!-- Planche de bord -->
+  <model>
+    <path>Aircraft/Caproni-Ca3/Models/Interior/Panel/panel.xml</path>
+    <offsets>
+      <x-m> -4.21047 </x-m>
+      <y-m>  0.00000 </y-m>
+      <z-m> -0.29975 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- All seats -->
+  <model>
+    <path>Aircraft/Caproni-Ca3/Models/Interior/Seats/all-seats.xml</path>
+  </model>
+  
+  <!-- Pilot -->
+>>>>>>> svn/master
   <model>
     <path>Aircraft/Caproni-Ca3/Models/Pilot/pilot.xml</path>
     <offsets>
@@ -28,7 +50,11 @@
     </offsets>
   </model>
 
+<<<<<<< HEAD
   <!-- Co pilote -->
+=======
+  <!-- Copilot -->
+>>>>>>> svn/master
   <model>
     <path>Aircraft/Caproni-Ca3/Models/Pilot/pilot.xml</path>
     <offsets>
@@ -38,7 +64,11 @@
     </offsets>
   </model>
 
+<<<<<<< HEAD
   <!-- Tireur avant -->
+=======
+  <!-- Top gunner -->
+>>>>>>> svn/master
   <model>
     <name>Gunner1</name>
     <path>Aircraft/Caproni-Ca3/Models/Pilot/debout.xml</path>
@@ -57,7 +87,21 @@
     </condition>
   </animation>
 
+<<<<<<< HEAD
   <!-- Tireur arrière -->
+=======
+  <!-- Top gun -->
+  <model>
+    <path>Aircraft/Caproni-Ca3/Models/Interior/Guns/gunA.xml</path>
+    <offsets>
+      <x-m> -5.64 </x-m>
+      <y-m>  0.00 </y-m>
+      <z-m>  0.96 </z-m>
+    </offsets>
+  </model>
+  
+  <!-- Rear gunner -->
+>>>>>>> svn/master
   <model>
     <name>Gunner2</name>
     <path>Aircraft/Caproni-Ca3/Models/Pilot/debout.xml</path>
@@ -77,6 +121,7 @@
     </condition>
   </animation>
 
+<<<<<<< HEAD
   <!-- Planche de bord -->
   <model>
     <path>Aircraft/Caproni-Ca3/Models/Interior/Panel/panel.xml</path>
@@ -87,4 +132,16 @@
     </offsets>
   </model>
 
+=======
+  <!-- Rear gun -->
+  <model>
+    <path>Aircraft/Caproni-Ca3/Models/Interior/Guns/gunB.xml</path>
+    <offsets>
+      <x-m> 0.220 </x-m>
+      <y-m> 0.000 </y-m>
+      <z-m> 2.017 </z-m>
+    </offsets>
+  </model>
+  
+>>>>>>> svn/master
 </PropertyList>
