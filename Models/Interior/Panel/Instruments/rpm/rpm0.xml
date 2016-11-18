@@ -12,20 +12,6 @@
     <object-name>vitre</object-name>
   </animation>
 
-<<<<<<< HEAD
-  <animation>
-    <type>noshadow</type>
-    <object-name>vitre</object-name>
-  </animation>
-
-  <animation>
-    <type>shader</type>
-    <shader>chrome</shader>
-    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
-    <object-name>vitre</object-name>
-  </animation>
-
-=======
   <!-- working for Rembrandt -->
   <effect>
     <inherits-from>Aircraft/Caproni-Ca3/Models/Effects/Glass/glass</inherits-from>
@@ -37,7 +23,6 @@
     <object-name>vitre</object-name>
   </effect>
   
->>>>>>> svn/master
   <animation>
     <type>material</type>
     <object-name>face</object-name>

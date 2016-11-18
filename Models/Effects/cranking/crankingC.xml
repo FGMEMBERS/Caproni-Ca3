@@ -1,26 +1,6 @@
 <?xml version="1.0" encoding="ISO-8859-1"?>
 
 <PropertyList>
-<<<<<<< HEAD
-
-  <particlesystem>
-    <name>smoke</name>
-    <type>normal</type>
-
-    <texture>smoke.png</texture>
-
-    <emissive type="bool">false</emissive>
-    <lighting type="bool">true</lighting>
-
-    <condition>
-      <and>
-        <greater-than>
-          <property>engines/engine[2]/rpm</property>
-          <value>30</value>
-        </greater-than>
-        <equals>
-          <property>engines/engine[2]/cranking</property>
-=======
   
   <particlesystem>
     <name>smoke</name>
@@ -41,20 +21,10 @@
         <equals>
           <!-- engines/engine[2]/cranking -->
           <property>sim/multiplay/generic/float[9]</property>
->>>>>>> svn/master
           <value>true</value>
         </equals>
       </and>
     </condition>
-<<<<<<< HEAD
-
-    <attach>world</attach>
-
-    <placer>
-      <type>point</type>
-    </placer>
-
-=======
     
     <attach>world</attach>
     
@@ -62,35 +32,12 @@
       <type>point</type>
     </placer>
     
->>>>>>> svn/master
     <shooter>
       <theta-min-deg>  60 </theta-min-deg>
       <theta-max-deg> 120 </theta-max-deg>
       <phi-min-deg>   -10 </phi-min-deg>
       <phi-max-deg>    50 </phi-max-deg>
       <speed-mps>
-<<<<<<< HEAD
-        <value>4</value>
-        <spread>3</spread>
-      </speed-mps>
-      <rotation-speed>
-        <x-min-deg-sec>0</x-min-deg-sec>
-        <y-min-deg-sec>0</y-min-deg-sec>
-        <z-min-deg-sec>0</z-min-deg-sec>
-        <x-max-deg-sec>0</x-max-deg-sec>
-        <y-max-deg-sec>0</y-max-deg-sec>
-        <z-max-deg-sec>0</z-max-deg-sec>
-      </rotation-speed>
-    </shooter>
-
-    <counter>
-      <particles-per-sec>
-        <value>40</value>
-        <spread>20</spread>
-      </particles-per-sec>
-    </counter>
-
-=======
         <value>  4 </value>
         <spread> 3 </spread>
       </speed-mps>
@@ -111,7 +58,6 @@
       </particles-per-sec>
     </counter>
     
->>>>>>> svn/master
     <particle>
       <start>
         <color>
@@ -121,17 +67,10 @@
           <alpha><value> 0.4 </value></alpha>
         </color>
         <size>
-<<<<<<< HEAD
-          <value>0.1</value>
-        </size>
-      </start>
-
-=======
           <value> 0.1 </value>
         </size>
       </start>
       
->>>>>>> svn/master
       <end>
         <color>
           <red><value>   0.93 </value></red>
@@ -140,20 +79,6 @@
           <alpha><value> 0.03 </value></alpha>
         </color>
         <size>
-<<<<<<< HEAD
-          <value>1.0</value>
-        </size>
-      </end>
-
-      <life-sec>
-        <value>3.0</value>
-      </life-sec>
-
-      <mass-kg>  0.02 </mass-kg>
-      <radius-m> 0.1 </radius-m>
-    </particle>
-
-=======
           <value> 1 </value>
         </size>
       </end>
@@ -166,21 +91,12 @@
       <radius-m> 0.10 </radius-m>
     </particle>
     
->>>>>>> svn/master
     <program>
       <fluid>               air  </fluid>
       <gravity type="bool"> true </gravity>
       <wind typ="bool">     true </wind>
     </program>
-<<<<<<< HEAD
-
-  </particlesystem>
-
-</PropertyList>
-
-=======
     
   </particlesystem>
   
 </PropertyList>
->>>>>>> svn/master
