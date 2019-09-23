@@ -19,6 +19,18 @@
       <model type="int">   4 </model>
     </rating>
 
+    <tags>
+      <tag>bomber</tag>
+      <tag>1910s</tag>
+      <tag>ww1</tag>
+      <tag>biplane</tag>
+      <tag>fixed-gear</tag>
+      <tag>tail-dragger</tag>
+      <tag>propeller</tag>
+      <tag>piston</tag>
+      <tag>fixed-pitch</tag>
+    </tags>
+
   </sim>
 
 </PropertyList>
